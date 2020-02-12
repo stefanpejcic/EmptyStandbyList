@@ -24,7 +24,7 @@ if '%errorlevel%' NEQ '0' (
     pushd "%CD%"
     CD /D "%~dp0"
 :--------------------------------------
-
+REM  -->  Stefan Pejcic - Feb 2020
 
 :loop
 echo Clearing...
