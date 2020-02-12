@@ -20,3 +20,6 @@ VAZNO
 U slucaju da ne radi, moguce je da se ne koristi admin nalog, s toga u Task Scheduler > Dump Res.Memory > desni klik-properties > pod General > Security > selektovati Run whetether user is logged on or not i Run with highest privileges.
 
 za .bat fajl nema potrebe za tim, on ce sam proveriti da li ste admin i pitati za password
+
+
+takodje, ako se koristi .bat fajl navesti gde se program nalazi, inace gadja po defaultu u System32 folder
