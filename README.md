@@ -1,25 +1,27 @@
-# EmptyStandbyList
-Empty Standby Memory automatically with Task Scheduler + EmptyStandbyList + .BAT
-
-1. KORAK
-Modifikovati program za import po potrebi:
-Na liniji 58 u XML fajlu (Dump Res.Memory) definisati gde se nalazi program, npr. C:\Windows\System32\EmptyStandbyList.exe
-Na liniji 59 u XML fajlu (Dump Res.Memory) definisati po potrebi tip memorije ya brisanje (workingsets|modifiedpagelist|standbylist|priority0standbylist)
-
-2. KORAK
-Na serveru ubaciti u folder System32 (definisan u 1. koraku) program EmptyStandbyList.exe
-
-3. KORAK
-Importovati fajl iz 1.koraka na server u start > Task Scheduler > Import
+# EmptyStandbyList  
+Automatically clear Standby Memory on Windows using Task Scheduler + EmptyStandbyList + .BAT
 
 
+## Usage
 
------------------------------
-VAZNO
+1. Put the `EmptyStandbyList.exe` file in the System32 folder on the server (`C:\Windows\System32\EmptyStandbyList.exe`).
+2. Edit the XML file:
+   - on line 58. set the path to the program, e.g. `C:\Windows\System32\EmptyStandbyList.exe`.
+   - on line 59. define the type of memory to clear: (`workingsets|modifiedpagelist|standbylist|priority0standbylist`).
+3. Import the xml file from **Start > Task Scheduler > Import**.
 
-U slucaju da ne radi, moguce je da se ne koristi admin nalog, s toga u Task Scheduler > Dump Res.Memory > desni klik-properties > pod General > Security > selektovati Run whetether user is logged on or not i Run with highest privileges.
+---
 
-za .bat fajl nema potrebe za tim, on ce sam proveriti da li ste admin i pitati za password
+## Troubleshooting
 
+If it doesn't work, it's possible that you're not using an admin account. In that case, go to **Task Scheduler > Dump Res.Memory > right-click Properties > under General > Security > select "Run whether user is logged on or not" and "Run with highest privileges."**
 
-takodje, ako se koristi .bat fajl navesti gde se program nalazi, inace gadja po defaultu u System32 folder
+For the .bat file, there's no need for that, as it will automatically check if you are an admin and prompt for a password.
+
+Also, if you're using the .bat file, specify where the program is located; otherwise, it defaults to the System32 folder.
+
+----
+
+## Not Maintained Anymore
+
+P.S. This is from my Windows days—I switched to Linux over a decade ago and no longer need this script. However, I’ve left it here for anyone who might find it useful. Feel free to contribute, fork, or report any issues. ✌️
