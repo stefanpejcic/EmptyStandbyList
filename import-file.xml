@@ -2,8 +2,8 @@
 <Task version="1.2" xmlns="http://schemas.microsoft.com/windows/2004/02/mit/task">
   <RegistrationInfo>
     <Date>2020-02-12T09:28:47.4870319</Date>
-    <Author>DESKTOP-SCM7AI1\lazar</Author>
-    <Description>dumpuje memoriju svakih 1h</Description>
+    <Author>DESKTOP-SCM7AI1\stefan</Author>
+    <Description>dump cached ram every 1h</Description>
     <URI>\Dump\Dump Res.Memory</URI>
   </RegistrationInfo>
   <Triggers>
